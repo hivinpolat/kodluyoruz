@@ -20,14 +20,16 @@ int main(void)
       printf("\n");
   }*/
     //sağa yatık piramit
-  for(int i=x;i>=1;--i)
+  for(int i=x-1;i>=1;--i)
   {
-      printf(".");
-      for(int j=1;j<=i;++j)
-      {
-          printf("#");
-    
+        for(int j=1;j<=i;j++)
+      { 
+             printf(" * ");    
       }
-        
+       printf("#\n"); 
   }
+ printf(" #\n");
+
+
 }
+
