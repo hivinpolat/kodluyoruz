@@ -1,42 +1,49 @@
-#include <cs50.h>
 #include <stdio.h>
-
+#include <cs50.h>
 int main(void)
 {
-      int x;
-   
-   do{
-     x=get_int("height:");
-      }while( x>8  || x<1);
-   printf("%d\n",x);
-   //sola yatık piramit
-   /*
-  for(int i=1;i<=x;++i)
-  {
-      for(int j=1;j<=i;++j)
-      {
-       printf("#");
-      }
-      printf("\n");
-  }*/
-    //sağa yatık piramit
-  for(int i=x;i>=1;--i)
- {
-        for(int j=1;j<=i;j++)
-      { 
-             printf("  ");    
-      }
-        printf("#\n "); 
-       for(int k=1;k<=x;++i)
- {
-        for(int l=1;l<=k;l++)
-      { 
-             printf(" # ");    
-      }
-        printf("\n "); 
-         
- }  
- }
-
-
+int i, j;
+int answer = get_int("Height: ");
+if(answer < 1 || answer > 8)
+{
+int answer2 = get_int("Again: ");
+for(i=1;i<=answer2;i++)
+{
+// printf("#");
+for(j=answer2;j>=1;j--)
+{
+if(j<=i)
+{
+printf("#");
 }
+else{
+printf(" ");
+}
+}
+// printf("#");
+printf("\n");
+}
+}
+else
+{
+
+for(i=1;i<=answer;i++)
+{
+   // printf("#");
+    for(j=answer;j>=1;j--)
+    {
+        if(j<=i)
+        {
+            printf("#");
+        }
+        else{
+            printf(" ");
+        }
+    }
+    // printf("#");
+    printf("\n");
+}
+}
+}
+         
+
